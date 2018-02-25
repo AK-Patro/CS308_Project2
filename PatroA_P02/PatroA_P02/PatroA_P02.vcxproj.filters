@@ -29,5 +29,8 @@
     <ClInclude Include="io.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="bst.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -10,9 +10,15 @@
 
 #include <stdio.h>
 #include "io.h"
+#include "bst.h"
 
 int main() {
 	char ans;
+	char report[100];
 
 	ans = ask();
+
+	insert(4);
+	strcpy(*report, print());
+	printf("%s", print());
 }
