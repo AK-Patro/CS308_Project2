@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #pragma warning (disable: 4996)
 
 struct BTNode {
@@ -18,36 +20,30 @@ struct BTNode *newNode(int x)
 	return temp;
 }
 
-struct BTNode *sapling = NULL;
 
-void add(struct BTNode *root, int x) {
+struct BTNode * insert(struct BTNode *root, int x) {
 	if (root == NULL)
-		root = newNode(x);
+		return newNode(x);
 
 
 	if (x < root->key)
-		add(root->left, x);
+		root->left = insert(root->left, x);
 	else if (x > root->key)
-		add(root->right, x);
+		root->right = insert(root->right, x);
 }
 
-void insert(int x) {
-	add(sapling, x);
-}
 
-char buff[100];
-
-void traverse(struct BTNode* root) {
+void traverse(struct BTNode* root, char * buff) {
 	if (root == NULL) {
 		return;
 	}
 
-	traverse(root->left);
-	sprintf(buff, "%c", itoa(root->key));
-	traverse(root->right);
+	traverse(root->left, buff);
+	sprintf(buff, "%d", root->key);
+	traverse(root->right, buff);
 }
 
-char* print() {
-	traverse(sapling);
+char* print(struct BTNode* root, char * buff) {
+	traverse(root, buff);
 	return *buff;
 }

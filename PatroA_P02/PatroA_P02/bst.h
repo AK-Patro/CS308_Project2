@@ -3,7 +3,8 @@
 #define _bst_h
 
 //struct BTNode *newNode(int);
-void insert(int);
-char* print();
+struct BTNode * insert(struct BSTNode*, int);
+char* print(struct BSTNode*, char*);
+struct BTNode *newNode(int);
 
 #endif // ! _bst_h
