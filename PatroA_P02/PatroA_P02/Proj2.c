@@ -9,8 +9,10 @@
 ***********************************************/
 
 #include <stdio.h>
-
+#include "io.h"
 
 int main() {
+	char ans;
 
+	ans = ask();
 }
