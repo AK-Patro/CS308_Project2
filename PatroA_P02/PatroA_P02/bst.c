@@ -39,7 +39,7 @@ void traverse(struct BTNode* root, char * buff) {
 	}
 
 	traverse(root->left, buff);
-	sprintf(buff, "%d", root->key);
+	sprintf(buff + strlen(buff), "%d", root->key);
 	traverse(root->right, buff);
 }
 

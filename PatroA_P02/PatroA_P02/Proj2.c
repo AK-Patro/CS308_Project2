@@ -14,9 +14,8 @@
 
 int main() {
 	char ans;
-	char report[100];
 	char buff[100];
-	//char* buff = malloc(40 * sizeof(char));
+	//char * buff = malloc(20*sizeof(char));
 	struct BTNode *sapling = NULL;
 
 	ans = ask();
@@ -24,7 +23,7 @@ int main() {
 	sapling = insert(sapling, 4);
 	insert(sapling, 2);
 	insert(sapling, 10);
+
 	print(sapling, buff);
-	//strcpy(report, print(sapling, buff));
 	printf("%s", buff);
 }
