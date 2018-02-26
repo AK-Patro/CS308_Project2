@@ -30,6 +30,8 @@ struct BTNode * insert(struct BTNode *root, int x) {
 		root->left = insert(root->left, x);
 	else if (x > root->key)
 		root->right = insert(root->right, x);
+	else if (x == root->key)
+		return root;
 
 	return root;
 }
