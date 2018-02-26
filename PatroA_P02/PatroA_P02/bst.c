@@ -59,3 +59,13 @@ int search(struct BTNode* root, int key) {
 	else if(key > root->key)
 		return search(root->right, key);
 }
+
+void quit(struct BTNode* root) {
+	if (root == NULL) {
+		return;
+	}
+
+	quit(root->left);
+	free(root);
+	quit(root->right);
+}

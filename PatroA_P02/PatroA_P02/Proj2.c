@@ -27,6 +27,8 @@ int main() {
 	int x = search(sapling, 2);
 	int y = search(sapling, 11);
 
+	quit(sapling);
+
 	print(sapling, buff);
 	printf("%s", buff);
 }
