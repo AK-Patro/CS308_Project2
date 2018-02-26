@@ -14,7 +14,7 @@
 
 int main() {
 	char ans;
-	int buff[100];
+	//int buff[100];
 	int dirtFlag = 0;
 	int loopFlag = 1;
 	struct BTNode *sapling = NULL;
@@ -37,6 +37,7 @@ int main() {
 			insert(sapling, askInsert());
 		}
 		else if (ans == 't') {
+			int buff[100] = { 0 };
 			print(sapling, buff);
 			askTraverse(buff);
 		}
@@ -46,7 +47,7 @@ int main() {
 		}
 		else if (ans == 'q') {
 			quit(sapling);
-			loopFlag = 0;
+			//loopFlag = 0;	//uncomment if you want quit to stop the loop
 		}
 	}
 }

@@ -67,23 +67,20 @@ int search(struct BTNode* root, int key) {
 }
 
 void quit(struct BTNode* root) {
-	if (root == NULL) {
-		return;
+	if (root->left != NULL) {
+		quit(root->left);
+	}
+	else if (root->right != NULL) {
+		quit(root->right);
 	}
 
-	quit(root->left);
+
 	free(root);
-	quit(root->right);
+
 }
 
 int count = 0;
 
 int nDigits(int n) {
-	/*
-	while (n != 0) {
-		n = n / 10;
-		count++;
-	}
-	return count;*/
 	return ++count;
 }

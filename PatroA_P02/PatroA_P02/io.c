@@ -21,7 +21,7 @@ int askInsert() {
 
 void askTraverse(int * buff) {
 	for (int i = 0; i < 100; i++) {
-		if (buff[i] >= 0) {
+		if (buff[i] > 0) {
 			printf(" %d", buff[i]);
 			printf(" ");
 		}
