@@ -47,3 +47,15 @@ char* print(struct BTNode* root, char * buff) {
 	traverse(root, buff);
 	return *buff;
 }
+
+int search(struct BTNode* root, int key) {
+	if (root == NULL)
+		return 0;
+	else if (root->key == key)
+		return 1;
+
+	else if (key < root->key)
+		return search(root->left, key);
+	else if(key > root->key)
+		return search(root->right, key);
+}

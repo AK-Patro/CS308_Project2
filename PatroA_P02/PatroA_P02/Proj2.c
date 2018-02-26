@@ -24,6 +24,9 @@ int main() {
 	insert(sapling, 2);
 	insert(sapling, 10);
 
+	int x = search(sapling, 2);
+	int y = search(sapling, 11);
+
 	print(sapling, buff);
 	printf("%s", buff);
 }
