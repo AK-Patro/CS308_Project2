@@ -12,10 +12,15 @@
 #include "io.h"
 #include "bst.h"
 
+/*************************************************
+* Description: Method run entire program*
+* Precondition: Input is nothing*
+* Post condition: Returns exit status as int*
+**************************************************/
 int main() {
 	char ans;
-	int dirtFlag = 0;
-	int loopFlag = 1;
+	int dirtFlag = 0;	//flag for checking whether this is the first iteration or not
+	int loopFlag = 1;	//flag to stay in loop
 	struct BTNode *sapling = NULL;
 	
 	while (loopFlag == 1) {

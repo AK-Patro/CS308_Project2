@@ -52,6 +52,11 @@ void askTraverse(int * buff) {
 	}
 }
 
+/*************************************************
+* Description: Method to ask user for number to search for*
+* Precondition: Input is nothing*
+* Post condition: Returns the answer as an int*
+**************************************************/
 int askSearch() {
 	int x = -1;
 
@@ -61,6 +66,11 @@ int askSearch() {
 	return x;
 }
 
+/*************************************************
+* Description: Method to state whether or not a number is in tree*
+* Precondition: Input is the int flag for whether a number is or not, and the number itself*
+* Post condition: Returns nothing*
+**************************************************/
 void searchResult(int flag, int x) {
 	if (flag == 1) {
 		printf("The number %d is in the tree", x);
