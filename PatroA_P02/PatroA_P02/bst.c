@@ -30,20 +30,24 @@ struct BTNode * insert(struct BTNode *root, int x) {
 		root->left = insert(root->left, x);
 	else if (x > root->key)
 		root->right = insert(root->right, x);
+
+	return root;
 }
 
 
-void traverse(struct BTNode* root, char * buff) {
+void traverse(struct BTNode* root, int * buff) {
 	if (root == NULL) {
 		return;
 	}
-
+	
 	traverse(root->left, buff);
-	sprintf(buff + strlen(buff), "%d", root->key);
+	//sprintf(buff + nDigits(root->key), "%d", root->key);
+	//sprintf(buff + nDigits(root->key) + 1, ' ');
+	buff[nDigits(root->key) - 1] = root->key;
 	traverse(root->right, buff);
 }
 
-char* print(struct BTNode* root, char * buff) {
+int* print(struct BTNode* root, int * buff) {
 	traverse(root, buff);
 	return *buff;
 }
@@ -68,4 +72,16 @@ void quit(struct BTNode* root) {
 	quit(root->left);
 	free(root);
 	quit(root->right);
+}
+
+int count = 0;
+
+int nDigits(int n) {
+	/*
+	while (n != 0) {
+		n = n / 10;
+		count++;
+	}
+	return count;*/
+	return ++count;
 }
