@@ -1,7 +1,7 @@
 /**********************************************
 * Name: Aswini Patro *
 * Date: 2/25/18 *
-* Assignment: Project 2: Binary Trees *
+* Assignment: Project 2: Sequence and Order validation *
 ***********************************************
 * Create a program that can as for a command to either
   insert, search, or print nodes of a binary search
@@ -14,17 +14,9 @@
 
 int main() {
 	char ans;
-	//int buff[100];
 	int dirtFlag = 0;
 	int loopFlag = 1;
 	struct BTNode *sapling = NULL;
-
-	/*sapling = insert(sapling, 4);
-	insert(sapling, 2);
-	insert(sapling, 3);
-	insert(sapling, 1);
-	insert(sapling, 10);
-	*/
 	
 	while (loopFlag == 1) {
 		ans = ask();
