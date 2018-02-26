@@ -47,4 +47,6 @@ int main() {
 			//loopFlag = 0;	//uncomment if you want quit to stop the loop
 		}
 	}
+
+	return 0;
 }

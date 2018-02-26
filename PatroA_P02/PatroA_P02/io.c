@@ -33,7 +33,7 @@ int askInsert() {
 	int x = -1;
 
 	printf("Enter a number to insert: ");
-	scanf_s("%d", &x);
+	scanf_s(" %d", &x);
 
 	return x;
 }
@@ -61,7 +61,7 @@ int askSearch() {
 	int x = -1;
 
 	printf("Enter a number to search for: ");
-	scanf_s("%d", &x);
+	scanf_s(" %d", &x);
 
 	return x;
 }
