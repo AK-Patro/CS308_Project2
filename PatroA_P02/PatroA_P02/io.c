@@ -37,11 +37,11 @@ int askSearch() {
 	return x;
 }
 
-void searchResult(int flag) {
+void searchResult(int flag, int x) {
 	if (flag == 1) {
-
+		printf("The number %d is in the tree", x);
 	}
 	else if (flag == 0) {
-
+		printf("The number %d is not in the tree", x);
 	}
 }

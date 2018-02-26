@@ -38,6 +38,10 @@ int main() {
 		askTraverse(buff);
 	}
 	else if (ans == 's') {
+		int x = askSearch();
+		searchResult(search(sapling, x), x);
+	}
+	else if (ans == 'q') {
 
 	}
 
