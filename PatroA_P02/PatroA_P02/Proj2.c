@@ -16,48 +16,37 @@ int main() {
 	char ans;
 	int buff[100];
 	int dirtFlag = 0;
-	//char * buff = malloc(20*sizeof(char));
+	int loopFlag = 1;
 	struct BTNode *sapling = NULL;
 
-	ans = ask();
-
-	sapling = insert(sapling, 4);
+	/*sapling = insert(sapling, 4);
 	insert(sapling, 2);
 	insert(sapling, 3);
 	insert(sapling, 1);
 	insert(sapling, 10);
+	*/
+	
+	while (loopFlag == 1) {
+		ans = ask();
 
-	if (ans == 'i' && dirtFlag == 0) {
-		sapling = insert(sapling, askInsert());
+		if (ans == 'i' && dirtFlag == 0) {
+			sapling = insert(sapling, askInsert());
+			dirtFlag = 1;
+		}
+		else if (ans == 'i' && dirtFlag == 1) {
+			insert(sapling, askInsert());
+		}
+		else if (ans == 't') {
+			print(sapling, buff);
+			askTraverse(buff);
+		}
+		else if (ans == 's') {
+			int x = askSearch();
+			searchResult(search(sapling, x), x);
+		}
+		else if (ans == 'q') {
+			quit(sapling);
+			loopFlag = 0;
+		}
 	}
-	else if (ans == 'i' && dirtFlag == 0) {
-		insert(sapling, askInsert());
-	}
-	else if (ans == 't') {
-		print(sapling, buff);
-		askTraverse(buff);
-	}
-	else if (ans == 's') {
-		int x = askSearch();
-		searchResult(search(sapling, x), x);
-	}
-	else if (ans == 'q') {
-
-	}
-
-
-
-
-	/*
-	sapling = insert(sapling, 4);
-	insert(sapling, 2);
-	insert(sapling, 10);
-
-	int x = search(sapling, 2);
-	int y = search(sapling, 11);*/
-
-	//quit(sapling);
-
-	//print(sapling, buff);
-	//printf("%s", buff);
 }
