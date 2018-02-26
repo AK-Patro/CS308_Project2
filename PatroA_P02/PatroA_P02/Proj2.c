@@ -37,6 +37,9 @@ int main() {
 		print(sapling, buff);
 		askTraverse(buff);
 	}
+	else if (ans == 's') {
+
+	}
 
 
 

@@ -27,3 +27,21 @@ void askTraverse(int * buff) {
 		}
 	}
 }
+
+int askSearch() {
+	int x = -1;
+
+	printf("Enter a number to search for: ");
+	scanf_s("%d", &x);
+
+	return x;
+}
+
+void searchResult(int flag) {
+	if (flag == 1) {
+
+	}
+	else if (flag == 0) {
+
+	}
+}
