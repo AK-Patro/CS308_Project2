@@ -4,7 +4,7 @@
 
 //struct BTNode *newNode(int);
 struct BTNode * insert(struct BSTNode*, int);
-int* print(struct BSTNode*, int*);
+void print(struct BSTNode*, int*);
 struct BTNode *newNode(int);
 int search(struct BTNode*, int);
 void quit(struct BTNode*);

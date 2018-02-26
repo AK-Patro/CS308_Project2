@@ -47,9 +47,9 @@ void traverse(struct BTNode* root, int * buff) {
 	traverse(root->right, buff);
 }
 
-int* print(struct BTNode* root, int * buff) {
+void print(struct BTNode* root, int * buff) {
 	traverse(root, buff);
-	return *buff;
+	//return *buff;
 }
 
 int search(struct BTNode* root, int key) {
